@@ -7,14 +7,33 @@ const path = require('path')
 module.exports = {
   dev: {
 
-    // Paths
-    assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+     // Paths
+        assetsSubDirectory: 'static',
+        assetsPublicPath: '/',
+        proxy: {
+          '/api': {
+            target: 'http://15.188.170.8:8086',
+            changeOrigin: true,
+            ws: true,
+            onProxyReq: function(request) {
+              request.setHeader("origin", "http://15.188.170.8:8086");
+            },
+          },
+    	  '/': {
+            target: 'http://15.188.170.8',
+            changeOrigin: true,
+            ws: true,
+            onProxyReq: function(request) {
+              request.setHeader("origin", "http://15.188.170.8:8086");
+            },
+          },
+        },
+
     proxyTable: {},
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    host: 'http://ec2-15-188-170-8.eu-west-3.compute.amazonaws.com', // can be overwritten by process.env.HOST
+    port: 80, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
