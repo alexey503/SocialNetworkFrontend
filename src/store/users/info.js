@@ -57,7 +57,7 @@ export default {
         url: `users/${id}`,
         method: 'GET'
       }).then(response => {
-        commit('setInfo', response.data.data)
+        commit('setInfo', response.data)
       }).catch(error => {})
     },
     async apiWall({
@@ -102,7 +102,7 @@ export default {
         method: 'GET'
       }).then(async response => {
         await dispatch('apiWall', {id})
-        commit('setUsersInfo', response.data.data)
+        commit('setUsersInfo', response.data)
       }).catch(error => {})
     }
   }
