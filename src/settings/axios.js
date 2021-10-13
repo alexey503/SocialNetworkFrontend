@@ -8,7 +8,8 @@ axios.defaults.headers['content-type'] = 'application/json';
 axios.defaults.withCredentials = true;
 switch (NODE_ENV) {
   case 'development':
-    axios.defaults.baseURL =  'http://127.0.0.1:8086/api/v1/';
+    axios.defaults.baseURL =  'http://45.134.255.54:8086/api/v1/';
+    // axios.defaults.baseURL =  'http://127.0.0.1:8086/api/v1/';
     break;
   case 'production':
     axios.defaults.baseURL =  'http://45.134.255.54:8086/api/v1/';

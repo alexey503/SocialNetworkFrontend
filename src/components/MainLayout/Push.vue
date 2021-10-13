@@ -27,7 +27,7 @@ export default {
     isOpen: Boolean
   },
   computed: {
-    ...mapGetters('profile/notifications', ['getNotifications', 'getNotificationsLength', 'getNotificationsTextType'])
+    // ...mapGetters('profile/notifications', ['getNotifications', 'getNotificationsLength', 'getNotificationsTextType'])
   },
   watch: {
     isOpen(val) {

@@ -17,7 +17,7 @@ export default {
     activeFilter: 'Все'
   }),
   computed: {
-    ...mapGetters('profile/notifications', ['getNotifications', 'getNotificationsLength']),
+    // ...mapGetters('profile/notifications', ['getNotifications', 'getNotificationsLength']),
     filterNotifications() {
       switch (this.activeFilter) {
         case 'Все':

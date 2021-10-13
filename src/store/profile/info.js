@@ -10,8 +10,9 @@ export default {
     getInfo(state) {
       if (!state.info) return
       let result = {
-        ...state.info
+        ...state.info.data
       }
+      console.log(result)
       result.fullName = result.first_name + ' ' + result.last_name
       result.ages = moment().diff(result.birth_date * 1000, 'years')
       // Добавить дефолтную аватарку

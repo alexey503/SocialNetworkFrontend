@@ -32,7 +32,7 @@ export default {
       await axios({
         url: 'platform/cities',
         method: 'GET',
-        params: {'countryId':'1'}
+        params: {'countryId': '1'}
       }).then(response => {
         commit('setCities', response.data.data)
       }).catch(() => {})

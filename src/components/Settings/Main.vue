@@ -83,11 +83,11 @@ export default {
   data: () => ({
     name: '',
     lastName: '',
-    phone: '',
+    phone: null,
     about: '',
     day: 1,
     month: { },
-    year: 2000,    
+    year: 2000,
     photo: null,
     src: '',
     country: '',
@@ -258,7 +258,7 @@ export default {
   mounted() {
     if (this.getInfo) this.setInfo()
     this.apiCountries()
-    this.apiAllCities()
+    // this.apiAllCities()
   },
   directives: {
     ClickOutside

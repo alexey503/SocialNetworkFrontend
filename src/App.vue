@@ -2,7 +2,7 @@
   #app
     component(:is="layout" v-if="$route.meta.layout")
       router-view
-    v-snackbar(:value="getState.show" :timeout="getState.timeout" :color="getState.status" right bottom) {{getState.text}}
+    //v-snackbar(:value="getState.show" :timeout="getState.timeout" :color="getState.status" right bottom) {{getState.text}}
 </template>
 
 <script>
@@ -17,8 +17,8 @@ export default {
   components: {
     FormLayout,
     MainLayout,
-    EmptyLayout,
-    VSnackbar
+    EmptyLayout
+    // VSnackbar
   },
   computed: {
     ...mapGetters('global/alert', ['getState']),

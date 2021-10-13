@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     ...mapActions('auth/api', ['logout']),
-    ...mapActions('profile/dialogs', ['apiUnreadedMessages']),
+    // ...mapActions('profile/dialogs', ['apiUnreadedMessages']),
     onLogout() {
       this.logout().then(() => {
         this.$router.push({ name: 'Login' })

@@ -5,10 +5,10 @@
         news-add(user)
       .news__list(v-if="getInfo")
         news-block(
-          v-for="feed in getFeeds" 
+          v-for="feed in getFeeds"
           :key="feed.id"
-          :info="feed" 
-          :edit="getInfo.id === feed.author_id" 
+          :info="feed"
+          :edit="getInfo.id === feed.author_id"
           :deleted="getInfo.id === feed.author_id"
         )
     .inner-page__aside
