@@ -6,6 +6,7 @@ const INTERVAL_NOTIFICATIONS_MS = 5000;
 
 export default {
   mounted () {
+    // s2_t2-t5
     // this.intervalForMessages = setInterval(() => {
     //   if (this.activeDialog) {
     //     this.loadFreshMessages(this.activeDialog.id)

@@ -258,6 +258,7 @@ export default {
   mounted() {
     if (this.getInfo) this.setInfo()
     this.apiCountries()
+    // s2_t2-t5
     // this.apiAllCities()
   },
   directives: {

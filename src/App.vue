@@ -2,6 +2,7 @@
   #app
     component(:is="layout" v-if="$route.meta.layout")
       router-view
+      //s2_t2-t5
     //v-snackbar(:value="getState.show" :timeout="getState.timeout" :color="getState.status" right bottom) {{getState.text}}
 </template>
 
@@ -18,6 +19,7 @@ export default {
     FormLayout,
     MainLayout,
     EmptyLayout
+    // s2_t2-t5
     // VSnackbar
   },
   computed: {
