@@ -27,7 +27,7 @@ export default {
         return
       }
 
-      this.passwordRecovery({ email: this.email }).then(() => {
+      this.passwordRecovery({},$v.email).then(() => {
         this.$router.push({ name: 'ForgotSuccess' })
       })
     }

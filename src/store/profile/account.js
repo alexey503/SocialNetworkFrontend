@@ -77,11 +77,11 @@ export default {
     setNotificationsSettings: (s, notifications) => s.notifications[localStorage.getItem('lang')].map(el => el.enable = notifications.find(n => n.notification_type === el.type).enable)
   },
   actions: {
-    async passwordRecovery({}, email) {
+    async passwordRecovery({},email) {
       await axios({
-        url: 'account/password/recovery',
+        url: 'account/password/recovery' + email,
         method: 'PUT',
-        data: email
+        params: email
       }).then(response => {}).catch(error => {})
     },
     async passwordSet({
